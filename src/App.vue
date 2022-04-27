@@ -5,9 +5,10 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/selectitemview">Select Item</router-link>
     </nav>
-    <transition name="slide">
+    <!-- <transition name="slide">
     <router-view/>
-    </transition>
+    </transition> -->
+    <router-view/>
   </div>
 </template>
 
