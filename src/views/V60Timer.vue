@@ -1,6 +1,5 @@
 <template>
   <div id="d_timer">
-    
     <div class="explanation card" >
       <button type="button" class="btn-close" aria-label="Close"></button> 
       <p class="text card-body">
@@ -8,12 +7,10 @@
       </p>
     </div>
     
-
     <div class="meter_box">
       <div class="meter">
       </div>
     </div>
-
     <div class="d_timer">
       <div class="d_time">
         {{ formatTime }}
@@ -88,12 +85,12 @@ export default {
 }
 </script>
 
-<style scoped>
 
+<style scoped>
 .text {
   font-family: 'Klee One', cursive;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #timer {
@@ -105,10 +102,11 @@ export default {
 .card-body {
   margin: 0;
   padding: 1rem 0rem 0;
+  border-top: none;
 }
 
 .d_timer {
-  margin: 10px 0;
+  
 }
 
 .time {
@@ -142,6 +140,8 @@ export default {
 }
 
 .explanation {
+  width: 95%;
+  max-width: 400px;
   padding: 1rem;
   position: fixed;
   top: 1%;
@@ -156,11 +156,11 @@ export default {
 }
 
 .comment_wrap {
-  padding: 0;
+  padding-left: 20px;
+  max-width: 400px;
 }
 
 .comment_wrap , .explanation {
-  width: 300px;
   margin: 0 auto;
 }
 
@@ -170,11 +170,10 @@ export default {
   margin: 0;
   position: relative;
   font-weight: normal;
-  background: linear-gradient(to right, rgb(48, 224, 192) 0%,rgba(96,155,208,0.7) 30%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to right, rgb(48, 224, 192,0.7) 0%,rgba(96,155,208,0.7) 30%,rgba(125,185,232,0) 100%);
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 50px 0 0 50px;
 }
-
 
 </style>

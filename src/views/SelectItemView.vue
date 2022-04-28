@@ -9,7 +9,7 @@
         <div class="card-body">
           <h5 class="card-title">hario_v60</h5>
           <p class="card-text">大きな一つ穴なのでお湯を注ぐ速度によってコーヒーの味を変えられるため、好みのコーヒーがたのしめる。</p>
-          <button class="btn btn-primary" @click="isShow = !isShow"><router-link to="/v60timer">Go Drip</router-link></button>
+          <button class="btn btn-primary" @click="isShow = !isShow"><router-link to="/timertest">Go Drip</router-link></button>
         </div>
         </div>
       </li>
