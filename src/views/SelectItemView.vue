@@ -7,7 +7,7 @@
         <div class="card">
         <span><img src="../assets/hario_v60.jpg" class="card-img-top" alt="/"></span>
         <div class="card-body">
-          <h5 class="card-title">hario_v60</h5>
+          <h5 class="card-title">HARIO V60</h5>
           <p class="card-text">大きな一つ穴なのでお湯を注ぐ速度によってコーヒーの味を変えられるため、好みのコーヒーがたのしめる。</p>
           <button class="btn btn-primary" @click="isShow = !isShow"><router-link to="/timertest">Go Drip</router-link></button>
         </div>
@@ -93,8 +93,13 @@
     border-top: solid 1px rgba(0, 0, 0, 0.125);
 }
 
+.card-text {
+  font-size: 0.9rem;
+}
+
 .btn-primary a {
   color: #FFF;
+  font-weight: bold;
   text-decoration: none!important;
 }
 
