@@ -1,214 +1,332 @@
 <template>
-  <div id="app">
-    <h1>HARIO V60</h1>
-    <div id="d_timer">
-        <!-- <div class="explanation card" >
-          <button type="button" class="btn-close" aria-label="Close"></button> 
-          <p class="text card-body">
+  <div id="main__wrapper">
+    <main>
+      <section id="mv" class="mv__less">
+        <!--Waves Container-->
+        <!-- heigtの数値を動的に変更するためにbind -->
+        <div class="wave__wrapper" :style="{height: waveHeight + 'vh'}">
+          <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" />
+              <use xlink:href="#gentle-wave" x="48" y="3" />
+              <use xlink:href="#gentle-wave" x="48" y="5" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div><!--wave__wrapper end-->
+
+        <div class="copy__wrapper">
+          <h2 class="mv__ttl">V 60</h2>
+          <p class="stop-watch">{{ m }}:{{ s }}:{{ ms }}</p>
+          <!-- (10秒 - アニメーション経過秒)を超えるとactiveクラスを付与、以下同様 -->
+          <!-- <p
+            class="sec sec10"
+            :class="
+              interval > 7600
+                ? { overlimit: !isActive }
+                : { overlimit: isActive }
+            "
+          >
+            10sec！
           </p>
-        </div> -->
-        <div class="meter_box">
-          <div class="meter coffee_anim" v-bind:class="{'is-start': pastTime >= 1 }"></div>
+          <p
+            class="sec sec20"
+            :class="
+              interval > 17600
+                ? { overlimit: !isActive }
+                : { overlimit: isActive }
+            "
+          >
+            20sec！
+          </p> -->
+          <p
+            class="sec sec30"
+            :class="
+              interval > 27600
+                ? { overlimit: !isActive }
+                : { overlimit: isActive }
+            "
+          >
+            30sec！
+          </p>
+                    <p
+            class="sec sec60"
+            :class="
+              interval > 57600
+                ? { overlimit: !isActive }
+                : { overlimit: isActive }
+            "
+          >
+            60sec！
+          </p>
+                    <p
+            class="sec sec90"
+            :class="
+              interval > 87600
+                ? { overlimit: !isActive }
+                : { overlimit: isActive }
+            "
+          >
+            90sec！
+          </p>
+                              <p
+            class="sec sec120"
+            :class="
+              interval > 117600
+                ? { overlimit: !isActive }
+                : { overlimit: isActive }
+            "
+          >
+            120sec！
+          </p>
+
+          <div class="btn__wrapper">
+            <button @click="startTimer()" v-show="!active">Start</button>
+            <button @click="stopTimer()" v-show="active">Stop</button>
+            <button @click="resetTimer()">Reset</button>
+          </div>
+          <!--btn__wrapper-->
         </div>
-    </div>
-    
-    <div class="timer-result d_time">
-      <p>{{ m }} : {{ s }} : {{ ms }}</p>
-    </div>
-    
-    <div class="timer-button">
-<!--v-bindで'disable'クラスを付与する-->
-      <button class="start" 
-              @click="start"
-              v-bind:class="{ 'disable': timerState }"
-              >Start</button>
-      <button class="stop"
-              @click="stop">Stop</button>
-      <button class="reset"
-              @click="reset">Reset</button>
-    </div>
-
-    <div class="explan-wrapper container"  v-bind:class="{'is-none': pastTime >= 1 }">
-      <p class="explan"><span class="sub_txt">一杯分のドリップレシピです。</span><span class="sub_txt">粉 / 器具 / 湯 / スケール,全ての準備が整ってからStartしてください。</span></p>
-    </div>
-
-    <ol class="comment_wrap">
-        <li class="comment_text text" v-bind:class="{'is-active': pastTime >= 1 }">豆全体を湿らす様に30cc注ぎ,30秒蒸らす。<span class="sub_txt">※フィルターにかからない様注意</span></li>
-        <li class="comment_text text" v-bind:class="{'is-active': pastTime >= 30000 }">100cc注ぐ<span class="sub_txt">※フィルターにかからない様注意</span></li>
-        <li class="comment_text text" v-bind:class="{'is-active': pastTime >= 60000 }">100cc注ぐ<span class="sub_txt">※フィルターにかからない様注意</span></li>
-        <li class="comment_text text" v-bind:class="{'is-active': pastTime >= 90000 }">160cc抽出できたらドリッパーを外す<span class="sub_txt">※2分を目処に落としきる</span></li>
-    </ol>
-            
-
-    <!-- {{ $data }} -->
-    
+        <!--copy__wrapper-->
+      </section>
+      <!--mv-->
+          <ol class="comment_wrap">
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }">豆全体を湿らす様に30cc注ぎ,30秒蒸らす。<span class="sub_txt">※フィルターにかからない様注意</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 30000 }">100cc注ぐ<span class="sub_txt">※フィルターにかからない様注意</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 60000 }">100cc注ぐ<span class="sub_txt">※フィルターにかからない様注意</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 90000 }">160cc抽出できたらドリッパーを外す<span class="sub_txt">※2分を目処に落としきる</span></li>
+          </ol>
+          <!--comment_wrap-->
+    </main>
   </div>
+  <!--main_wrapper-->
 </template>
 
 <script>
 export default {
-  
+  name: "stopWatch",
   data() {
     return {
-      startTime: 0 ,
-      pastTime: 0 ,
-      timerObj: null,
-//timerStateを追加
-      timerState: false
+      active: false, // 実行状態
+      start: 0, // startを押した時刻
+      timer: 0, // setInterval()の格納用
+      interval: 0, // 計測時間
+      accum: 0, // 累積時間(stopしたとき用)
+      isActive: false, //表示のOn/Off
+      waveHeight: 0, //波の位置(高さ)
     };
   },
-  methods:{
-    countUp(){
-      return this.pastTime = Date.now() - this.startTime
+  computed: {
+    m() {
+      let m = Math.floor((this.interval / 60000) % 60);
+      return ("0" + m).slice(-2);
     },
-    start(){
-      this.startTime = Date.now()
-//timerStateをtrueにする。
-      this.timerState = true
-      var self = this
-      this.timerObj = setInterval(function(){
-        self.countUp()
-      },10)
-//ここにアニメーション？
-    },   
-    stop(){
-      clearInterval( this.timerObj )
-//timerStateをfalseにする。
-      this.timerState = false
-      this.startTime = 0
+    s() {
+      let s = Math.floor((this.interval / 1000) % 60);
+      return ("0" + s).slice(-2);
     },
-    reset(){
-      this.stop()
-      this.pastTime = 0
-      this.timerObj = null
-    }
+    ms() {
+      let ms = Math.floor(this.interval / 10);
+      return ("0" + ms).slice(-2);
+    },
   },
-  computed:{
-    m(){
-      var m = Math.floor( this.pastTime / 60000 % 60 )
-      return ( '0' + m ).slice(-2)
-      },
-    s(){
-      var s = Math.floor( this.pastTime / 1000 % 60 )
-      return ( '0' + s ).slice(-2)
-      },
-    ms(){
-      var ms = Math.floor( this.pastTime / 10 )
-      return ( '0' + ms ).slice(-2)
-      }
-  }
+  methods: {
+    startTimer() {
+      this.active = true;
+      this.start = Date.now();
+
+      // 10msごとに現在時刻とstartを押した時刻の差を足す
+      this.timer = setInterval(() => {
+        if(this.interval <= 150000) {
+          this.interval = this.accum + (Date.now() - this.start);
+          this.waveHeight =  (this.interval / 150000) * 100 + 12.98;
+        }
+        //30秒になったらタイマーをクリア
+        if(this.interval == 150000) {
+          clearInterval(this.timer);
+        }
+      }, 10);
+    },
+    stopTimer() {
+      this.active = false;
+      this.accum = this.interval;
+      clearInterval(this.timer);
+    },
+    resetTimer() {
+      this.interval = 0;
+      this.accum = 0;
+      this.start = Date.now();
+      this.waveHeight = 0;
+    },
+  },
 };
-
-// alert('粉,器具,湯,スケール,全ての準備が整ってから開始してください。');
-
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+<style scoped>
+.btn__wrapper {
+  /* margin-top: 40px; */
+}
+.btn__wrapper button {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  padding: 0;
+}
+.btn__wrapper button:hover {
+  opacity: 0.7;
+}
+.stop-watch {
+  font-family: "Nova Mono", monospace;
+  font-size: 4rem;
+  text-shadow: #fff 4px 1px 1px;
+}
+.sec {
+  display: none;
+  position: absolute;
+  left: -60px;
+  /* background-color: yellow; */
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
-  color: #2c3e50;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #16fc15;
 }
-
-a,
-button {
-  color: #4fc08d;
+.sec30 {
+  bottom: -35%;
 }
-
-button {
-  background: none;
-  border: solid 1px;
-  border-radius: 2em;
-  font: inherit;
-  padding: 0.75em 2em;
+.sec60 {
+  bottom: -20.7%;
 }
-  
-/*
-スタートボタンを無効化する。
-*/
-  .disable {
-  pointer-events: none;
-  background-color: #4fc08d;;
-  color: #fff;
+.sec90 {
+  bottom: -5.4%;
+}
+.sec120 {
+  bottom: 7.4%;
+}
+.sec.overlimit {
+  display: block;
+  /* ふわふわと移動アニメーション */
+  animation: fuwafuwa 3s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite, sec_bubble 2.4s cubic-bezier(0.91, 0.14, 0.56, 1.9) forwards;
+}
+@keyframes fuwafuwa {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .time-result{
-    font-size: 29px;
+  50% {
+    transform: translateY(-20px);
   }
-
-  .text {
-  font-family: 'Klee One', cursive;
-  text-align: left;
-  font-size: 1rem;
 }
-
-#timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes sec_bubble {
+  0% {
+    left: 150vw;
+  }
+  100% {
+    left: 0px;
+  }
 }
-
-.card-body {
-  margin: 0;
-  padding: 1rem 0rem 0;
-  border-top: none;
+#mv {
+  position: relative;
 }
-
-.d_timer {
-  
-}
-
-.time {
-  font-size: 100px;
-}
-
-.d_time {
-  font-size: 2.5rem;
-  font-family: 'Inconsolata', monospace;
-}
-
-.meter_box {
-  border: solid 1px #ced4da;;
-  width: 140px;
-  height: 126px;  
-  margin: 0 auto;
-  border-radius: 0 0 30px 30px ;
-  background-color: rgb(62 30 3);
+#mv::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #FFF;
   overflow: hidden;
 }
-
-.meter {
+.copy__wrapper {
+  position: relative;
+  z-index: 10;
+}
+/* Wave */
+.wave__wrapper {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.wave__wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 67vh;
+  left: 0;
+  width: 100vw;
+  height: 118vh;
+  /* padding-top: 12.98vh; */
+  background-color: rgb(129 58 21);
+}
+.waves {
+  position: absolute;
+  top: 439px;
+  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: #fff;
+  height: 12.98vh;
+}
+@media (min-width: 992px) {
+.waves {
+  top: 562px;
+}
 }
 
-.is-start {
-  animation: anim2 120s ease-in;
-  animation-fill-mode:forwards;/*コレが最後停止*/
+.parallax > use {
+  fill: rgb(129 58 21);
+  /* 波のアニメ */
+  animation: waveAnim 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  opacity: 0.7;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  opacity: 0.5;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  opacity: 0.3;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: rgb(129 58 21);
+}
+@keyframes waveAnim {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }
 
-.btn {
-  width: 200px;
-  margin: 0 auto 20px;
-}
-
-.explanation {
-  width: 95%;
-  max-width: 400px;
-  padding: 1rem;
-  position: fixed;
-  top: 1%;
-  right: 10px;
-  height: auto;
-}
-
-.btn-close {
-    position: absolute;
-    right: 10px;
-    top: 0.5rem;
-}
-
+/* 指示出しテキスト */
 .comment_wrap {
   padding-left: 20px;
   max-width: 400px;
@@ -225,45 +343,22 @@ button {
   margin: 0;
   position: relative;
   font-weight: normal;
-  background: linear-gradient(to right, rgb(48, 224, 192,0.7) 0%,rgba(96,155,208,0.7) 30%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to right, rgb(0 208 28) 0%,rgb(56 187 90 / 70%) 30%,rgb(125 185 232 / 90%) 100%);
   padding: 10px 20px;
   margin-bottom: 15px;
   border-radius: 50px 0 0 50px;
   display: none;
-  font-weight: bold;
-  color: #424242;
+  color: #05527f;
+  z-index: 1000;
 }
 
 .comment_text:last-child {
-    background: linear-gradient(to right, rgb(252 255 46 / 70%) 0%,rgb(241 223 94 / 70%) 30%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to right, rgb(252 255 46 / 70%) 0%,rgb(241 223 94 / 70%) 30%,rgb(125 232 197 / 78%) 100%);
 }
 
 .comment_wrap .is-active {
   animation: anim 0.7s linear;
   display: block;
-}
-
-.sub_txt {
-  display: block;
-  font-size: 0.9rem;
-}
-
-.explan-wrapper {
-  text-align: left;
-  margin: 30px auto;
-  max-width: 400px;
-}
-
-.explan {
-  color: mediumblue;
-  border: solid 1px #adb5bd;
-  background-color: aliceblue;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-.is-none {
-  display: none;
 }
 
 @keyframes anim {
@@ -275,15 +370,4 @@ button {
   transform: translateX(0);
   }
 }
-
-@keyframes anim2 {
-  0% {
-  transform: translateY(0);
-  }
-
-  100% {
-  transform: translateY(-100px);
-  }
-}
-
 </style>

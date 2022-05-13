@@ -1,4 +1,4 @@
-const trigger = document.querySelectorAll(".trigger");
+const trigger = document.querySelectorAll(".torigger");
 const meter = document.querySelectorAll(".meter");
 
 window.addEventListener("load", (event) => {

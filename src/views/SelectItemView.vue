@@ -1,7 +1,7 @@
 <template>
   <div class="item_select">
-    <h1 class="ttl">Select Item</h1>
-    <p>使用する器具を選択してください</p>
+    <h1 class="ttl">Item Select</h1>
+    <p class="text">使用する器具を選択してください</p>
     <ul class="items_wrapper">
       <li>
         <div class="card">
@@ -9,7 +9,7 @@
         <div class="card-body">
           <h5 class="card-title">HARIO V60</h5>
           <p class="card-text">大きな一つ穴なのでお湯を注ぐ速度によってコーヒーの味を変えられるため、好みのコーヒーがたのしめる。</p>
-          <button class="btn btn-primary" @click="isShow = !isShow"><router-link to="/timertest">Go Drip</router-link></button>
+          <a href="/timertest" class="btn btn-primary">Go Drip</a>
         </div>
         </div>
       </li>
@@ -37,11 +37,7 @@
   </div>
 </template>
 
-<style>
-.ttl {
-  margin-bottom: 30px;
-}
-
+<style scoped>
 .item_select img { width: 100%; }
 
 .items_wrapper {
@@ -62,7 +58,7 @@
 }
 
 .items_wrapper li {
-    margin: 0 5px 30px !important;
+    margin: 0 5px 30px!important;
     justify-content: flex-start;
 }
 }
@@ -97,11 +93,18 @@
   font-size: 0.9rem;
 }
 
-.btn-primary a {
+.btn-primary {
   color: #FFF;
   font-weight: bold;
   text-decoration: none!important;
+  background-color: #42b983!important;
+  border-color: #42b983;
 }
 
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #42b983!important;
+    border-color: #42b983;
+}
 
 </style>
