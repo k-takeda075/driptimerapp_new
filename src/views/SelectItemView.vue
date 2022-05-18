@@ -9,7 +9,7 @@
         <div class="card-body">
           <h5 class="card-title">HARIO V60</h5>
           <p class="card-text">大きな一つ穴なのでお湯を注ぐ速度によってコーヒーの味を変えられるため、好みのコーヒーがたのしめる。</p>
-          <a href="/timertest" class="btn btn-primary">Go Drip</a>
+          <a href="/v60timer" class="btn btn-primary">Go Drip</a>
         </div>
         </div>
       </li>
@@ -90,6 +90,7 @@
 }
 
 .card-text {
+  text-align: left;
   font-size: 0.9rem;
 }
 

@@ -31,6 +31,7 @@ h1 {
   font-family: 'Neonderthaw', cursive;
   font-size: 3rem;
   margin-bottom: 30px;
+  padding: 40px 0 30px;
 }
 
 h2 {

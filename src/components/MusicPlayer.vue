@@ -7,13 +7,13 @@
 
 <style>
 .music_player .dropdown {
-  /* position: relative; */
+  margin-bottom: 1em!important;
 }
 
 .music_player .btn {
-  position: absolute;
-  top: 82vh;
-  right: 0.5rem;
+  position: inherit;
+  /* top: 82vh;
+  right: 0.5rem; */
   z-index: 100;
   font-weight: bold;
   background-color: #FFF;
