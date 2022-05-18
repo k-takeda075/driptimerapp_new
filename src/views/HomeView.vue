@@ -25,7 +25,7 @@ export default {
     color: #fff;
     background-color: #42b983!important;
     border-color: #42b983;
-}
+} */
 
 h1 {
   font-family: 'Neonderthaw', cursive;
@@ -70,7 +70,7 @@ h2 {
   background-image: url(/Users/6d163/Desktop/vue_jissyu/driptimerapp_new/src/assets/arrow-right-circle.svg);
   background-size: contain;
   background-position: center;
-}  */
+} 
 
 
 </style>
