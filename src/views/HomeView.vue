@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+/* .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #42b983!important;
     border-color: #42b983;
@@ -70,7 +70,7 @@ h2 {
   background-image: url(/Users/6d163/Desktop/vue_jissyu/driptimerapp_new/src/assets/arrow-right-circle.svg);
   background-size: contain;
   background-position: center;
-} 
+}  */
 
 
 </style>
