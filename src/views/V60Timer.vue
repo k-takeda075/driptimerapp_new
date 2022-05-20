@@ -261,13 +261,11 @@ export default {
   overflow: hidden;
 }
 .copy__wrapper {
-  position: relative;
-  z-index: 10;
 }
 /* Wave */
 .wave__wrapper {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -284,6 +282,18 @@ export default {
   /* padding-top: 12.98vh; */
   background-color: rgb(129 58 21);
 }
+/* @media (min-width: 768px) {
+.wave__wrapper::before {
+  top: 55vh;
+}
+}
+@media (min-width: 992px) {
+  .wave__wrapper::before {
+  top: 67vh;
+}
+} */
+
+
 .waves {
   position: absolute;
   top: 439px;
@@ -355,7 +365,7 @@ export default {
   border-radius: 50px 0 0 50px;
   display: none;
   color: #05527f;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .comment_text:last-child {
