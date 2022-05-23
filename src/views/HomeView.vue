@@ -17,7 +17,7 @@
         まずは音楽を再生し、気分を盛り上げてハンドドリップを楽しもう！
       </p>
     </div>
-    <a href="/selectitemview" class="btn btn-primary go-select">ドリッパー選択へ進む</a>
+    <router-link to ="/selectitemview" class="btn btn-primary go-select">ドリッパー選択へ進む</router-link>
   </div>
 </template>
 
