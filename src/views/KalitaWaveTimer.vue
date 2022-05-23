@@ -29,7 +29,7 @@
         </div><!--wave__wrapper end-->
 
         <div class="copy__wrapper">
-          <h2 class="mv__ttl">V 60</h2>
+          <h2 class="mv__ttl">Kalita Wave</h2>
           <p class="stop-watch">{{ m }}:{{ s }}:{{ ms }}</p>
           <!-- (10秒 - アニメーション経過秒)を超えるとactiveクラスを付与、以下同様 -->
           <!-- <p

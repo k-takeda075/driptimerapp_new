@@ -2,11 +2,6 @@
   <div id="app">
     <h1>HARIO V60</h1>
     <div id="d_timer">
-        <!-- <div class="explanation card" >
-          <button type="button" class="btn-close" aria-label="Close"></button> 
-          <p class="text card-body">
-          </p>
-        </div> -->
         <div class="meter_box">
           <div class="meter coffee_anim" v-bind:class="{'is-start': pastTime >= 1 }"></div>
         </div>
@@ -152,10 +147,6 @@ button {
   margin: 0;
   padding: 1rem 0rem 0;
   border-top: none;
-}
-
-.d_timer {
-  
 }
 
 .time {

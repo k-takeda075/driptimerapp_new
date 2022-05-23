@@ -17,16 +17,19 @@
 </template>
 
 <style>
+
+iframe {
+  box-shadow: 0 -1px 14px #777;
+}
 .music_player .dropdown {
   margin-bottom: 1em!important;
 }
-
 .music_player .btn {
   /* position: absolute; */
   /* top: 82vh;
   right: 0.5rem; */
   font-weight: bold;
-  /* background-color: #FFF; */
+  background-color: #FFF;
   border-color: #42b983;
   color: #42b983;
   margin: 0;

@@ -9,17 +9,17 @@
         <div class="card-body">
           <h5 class="card-title">HARIO V60</h5>
           <p class="card-text">大きな一つ穴なのでお湯を注ぐ速度によってコーヒーの味を変えられるため、好みのコーヒーがたのしめる。</p>
-          <a href="/v60timer" class="btn btn-primary">Go Drip</a>
+          <router-link to ="/v60timer" class="btn btn-primary">Go Drip</router-link>
         </div>
         </div>
       </li>
       <li>
         <div class="card">
-        <span><img src="../assets/karita_dripper.jpeg" class="card-img-top" alt="/"></span>
+        <span><img src="../assets/KalitaWave.webp" class="card-img-top" alt="/"></span>
         <div class="card-body">
-          <h5 class="card-title">KALITA</h5>
+          <h5 class="card-title">Kalita Wave</h5>
           <p class="card-text">カリタのドリッパーは三つ穴、雑味がでる前に、美味しさだけをドリップするのが特徴です。</p>
-          <a href="#" class="btn btn-primary">Go Drip</a>
+          <router-link to="/kalitawavetimer" class="btn btn-primary">Go Drip</router-link>
         </div>
         </div>
       </li>
@@ -29,7 +29,7 @@
         <div class="card-body">
           <h5 class="card-title">hario_v60</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go Drip</a>
+          <router-link to="#" class="btn btn-primary">Go Drip</router-link>
         </div>
         </div>
       </li>
@@ -80,7 +80,11 @@
   }
 
     .card {
-    height: 100%;}
+    height: 100%;
+    box-shadow: 0 15px 10px #777;
+    margin: 15px 0;
+    border: none;
+    }
 
     .card-body {
     display: flex;

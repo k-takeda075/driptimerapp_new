@@ -42,7 +42,6 @@ export default {
 }
 
 h1 {
-  /* font-family: 'Neonderthaw', cursive; */
   font-size: 3rem;
 }
 
@@ -88,6 +87,8 @@ nav a.router-link-exact-active {
 }
 
 .card-text , .text {
-  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: 'Noto Sans JP', sans-serif;
 }
+
+
 </style>
