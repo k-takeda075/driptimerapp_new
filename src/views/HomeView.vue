@@ -21,11 +21,11 @@ export default {
 </script>
 
 <style scoped>
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+/* .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #42b983!important;
     border-color: #42b983;
-}
+} */
 
 h1 {
   font-family: 'Neonderthaw', cursive;
