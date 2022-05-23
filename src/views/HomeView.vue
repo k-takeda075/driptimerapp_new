@@ -64,14 +64,14 @@ h2 {
   color: #FFF;
 }
 
-.go-select::after {
+/* .go-select::after {
   content: '';
   width: 1em;
   height: 1em;
-  background-image: url(/Users/6d163/Desktop/vue_jissyu/driptimerapp_new/src/assets/arrow-right-circle.svg);
+  background-image: url(../assets/arrow-right-circle.svg);
   background-size: contain;
   background-position: center;
-} 
+}  */
 
 
 </style>
