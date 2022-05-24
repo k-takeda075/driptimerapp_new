@@ -23,7 +23,7 @@
         </div>
         </div>
       </li>
-            <li>
+      <!-- <li>
         <div class="card">
         <span><img src="../assets/hario_v60.jpg" class="card-img-top" alt="/"></span>
         <div class="card-body">
@@ -32,7 +32,7 @@
           <router-link to="#" class="btn btn-primary">Go Drip</router-link>
         </div>
         </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>

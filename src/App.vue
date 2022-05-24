@@ -41,6 +41,10 @@ export default {
   color: #2c3e50;
 }
 
+body {
+  margin-bottom: 100px;
+}
+
 h1 {
   font-size: 3rem;
 }
