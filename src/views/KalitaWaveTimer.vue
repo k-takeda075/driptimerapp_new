@@ -115,10 +115,10 @@
       </section>
       <!--mv-->
           <ol class="comment_wrap">
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯30g</span>を粉全体にかかるように注ぎ,30秒蒸らす</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 30000 }"><span class="oyu">湯100g</span>を中心から外側へ、”の”の字を描く様にゆっくりと注ぐ</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 60000 }"><span class="oyu">湯100g</span>を同じく中心から外側へ、少し早めに注ぐ</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 90000 }">コーヒーが<span class="oyu">160g</span>抽出できたらドリッパーを外す<span class="sub_txt">※2~3分を目処に落としきる</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯40g</span>を粉全体にかかるように注ぎ,40秒蒸らす</li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 40000 }"><span class="oyu">湯60g</span>を円を描くように注ぐ</li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 61000 }"><span class="oyu">湯50g</span>を注ぐ</li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 100000 }"><span class="oyu">湯50g</span>を注ぎ、最後まで落としきる<span class="sub_txt">※2分20~30秒を目処に終了</span></li>
           </ol>
           <!--comment_wrap-->
     </main>
@@ -382,7 +382,7 @@ export default {
   display: block;
 }
 .sub_txt {
-  /* display: block; */
+  display: block;
 }
 .oyu {
   color: #fc15a0;

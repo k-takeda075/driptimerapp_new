@@ -118,7 +118,7 @@
               <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯30g</span>を粉全体にかかるように注ぎ,30秒蒸らす</li>
               <li class="comment_text" v-bind:class="{'is-active': interval >= 30000 }"><span class="oyu">湯100g</span>を中心から外側へ、”の”の字を描く様にゆっくりと注ぐ</li>
               <li class="comment_text" v-bind:class="{'is-active': interval >= 60000 }"><span class="oyu">湯100g</span>を同じく中心から外側へ、少し早めに注ぐ</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 90000 }">コーヒーが<span class="oyu">160g</span>抽出できたらドリッパーを外す<span class="sub_txt">※2~3分を目処に落としきる</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 90000 }">コーヒーが<span class="oyu">160g</span>抽出できたらドリッパーを外す<span class="sub_txt">※1分半~2分を目処に落としきる</span></li>
           </ol>
           <!--comment_wrap-->
     </main>
@@ -385,7 +385,7 @@ export default {
   display: block;
 }
 .sub_txt {
-  /* display: block; */
+  display: block;
 }
 .oyu {
   color: #fc15a0;
@@ -403,7 +403,7 @@ export default {
 }
 
 .is-none {
-      cdisplay: none;
+  /* display: none; */
 }
 .explan-wrapper {
   text-align: left;
