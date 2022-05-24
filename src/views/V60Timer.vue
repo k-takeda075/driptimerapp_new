@@ -301,6 +301,12 @@ export default {
   width: 100%;
   height: 12.98vh;
 }
+@media (min-width: 768px) {
+  .waves {
+    top: 554px;
+    height: 12.98vh;
+  }
+}
 @media (min-width: 992px) {
 .waves {
   top: 562px;
@@ -397,9 +403,7 @@ export default {
 }
 
 .is-none {
-  position: fixed;
-  opacity: 0;
-  transition: all 0.2s ease-out;
+      cdisplay: none;
 }
 .explan-wrapper {
   text-align: left;

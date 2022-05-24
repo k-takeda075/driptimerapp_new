@@ -192,7 +192,6 @@ export default {
   font-size: 3em;
 }
 .btn__wrapper {
-  /* margin-top: 40px; */
 }
 .btn__wrapper button {
   width: 80px;
@@ -301,11 +300,17 @@ export default {
   width: 100%;
   height: 12.98vh;
 }
-@media (min-width: 992px) {
-.waves {
-  top: 562px;
-  height: 12.98vh;
+@media (min-width: 768px) {
+  .waves {
+    top: 554px;
+    height: 12.98vh;
+  }
 }
+@media (min-width: 992px) {
+  .waves {
+    top: 562px;
+    height: 12.98vh;
+  }
 }
 
 .parallax > use {
@@ -348,11 +353,9 @@ export default {
   max-width: 400px;
   margin-top: 30px!important;
 }
-
 .comment_wrap , .explanation {
   margin: 0 auto;
 }
-
 .comment_text {
   list-style: none;
   padding-bottom: 2px;
@@ -397,9 +400,7 @@ export default {
 }
 
 .is-none {
-  position: fixed;
-  opacity: 0;
-  transition: all 0.2s ease-out;
+  display: none;
 }
 .explan-wrapper {
   text-align: left;
