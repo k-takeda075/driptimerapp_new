@@ -1,6 +1,6 @@
 {
 	"name":				"coffeedripapp",
-	"short_name":		"cda",
+	"short_name":		"drip timer",
 	"description":		"コーヒードリップ用App",
 	"start_url":		"/",
 	"display":			"standalone",
