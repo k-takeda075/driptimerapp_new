@@ -4,7 +4,7 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/selectitemview">Select Item</router-link>
+      <router-link to="/selectitemview">Item Select</router-link>
     </nav>
     <div class="music_player">
       <b-dropdown
