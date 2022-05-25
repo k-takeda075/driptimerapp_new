@@ -402,7 +402,7 @@ export default {
 }
 
 .is-none {
-  /* display: none; */
+  display: none;
 }
 .explan-wrapper {
   text-align: left;
