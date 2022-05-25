@@ -295,23 +295,23 @@ export default {
 }
 .waves {
   position: absolute;
-  top: 390px;
+  top: 410px;
   left: 0;
   width: 100%;
   height: 12.98vh;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .waves {
-    top: 500px;
+    top: 554px;
     height: 12.98vh;
   }
 }
 @media (min-width: 992px) {
   .waves {
-    top: 510px;
+    top: 562px;
     height: 12.98vh;
   }
-}
+} */
 
 .parallax > use {
   fill: rgb(129 58 21);

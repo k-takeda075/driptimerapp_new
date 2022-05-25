@@ -295,7 +295,7 @@ export default {
 }
 .waves {
   position: absolute;
-  top: 400px;
+  top: 410px;
   left: 0;
   width: 100%;
   height: 12.98vh;
