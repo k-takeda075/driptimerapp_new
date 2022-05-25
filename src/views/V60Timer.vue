@@ -273,7 +273,6 @@ export default {
   background: #FFF;
   overflow: hidden;
 }
-
 /* Wave */
 .wave__wrapper {
   position: absolute;
