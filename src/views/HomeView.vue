@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
+      <a href="#" id="page-top">TOP</a>
       <h1>Coffee Drip App</h1>
       <h2>HOW TO USE</h2>
       <p class="text">
@@ -72,6 +73,22 @@ h3 {
 }
 h3.step {
   font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+h3.step:before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #00a02e;
+  border-radius: 2px;
 }
 
 .text {
@@ -111,5 +128,33 @@ h3.step {
   max-width: 400px;
   padding: 5px 30px 0;
 }
+
+/***追従するトップへ戻るボタン***/
+#page-top {
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transform: rotate(90deg);
+    font-size: 90%;
+    line-height: 1.5rem;
+    color: #869193ab;
+    padding: 0 0 0 35px;
+    border-top: solid 1px;
+}
+#page-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+}
+/***トップへ戻るボタンここまで***/
 
 </style>
