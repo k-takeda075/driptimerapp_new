@@ -16,21 +16,21 @@
         <li>サーバー（マグに直接でも可）</li>
         <li>電子スケール</li>
       </ul>
-      <h3>Step1</h3>
+      <h3 class="step">Step 1</h3>
       <img class="howto_img" src="../assets/howto1.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">約90℃のお湯を用意（沸騰したお湯をドリップケトルに移し替えたら約90℃です）</p>
-      <h3>Step2</h3>
+      <h3 class="step">Step 2</h3>
       <img class="howto_img" src="../assets/howto2.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">
         フィルターをセットしたドリッパーをサーバー（マグ）の上に置き、スケールの上に置く。</p>
       <p class="text">
         フィルターを湯通ししておくと、紙の匂いが取れクリアになる。<br>お湯は捨て、水気を切っておく。
         </p>
-      <h3>Step3</h3>
+      <h3 class="step">Step 3</h3>
       <img class="howto_img" src="../assets/howto3.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">コーヒー13~15gを入れたら、側面を軽くポンポンと叩き平にする。<br>
         重さを差し引くために、スケールの重さを「0」にリセット。</p>
-      <h3>Step4</h3>
+      <h3 class="step">Step 4</h3>
       <img class="howto_img" src="../assets/howto4.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
       
@@ -50,11 +50,6 @@ export default {
 </script>
 
 <style scoped>
-/* .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #42b983!important;
-    border-color: #42b983;
-} */
 
 h1 {
   font-family: 'Neonderthaw', cursive;
@@ -74,6 +69,9 @@ h3 {
   font-size: 1.5rem;
   color: #00a02e;
   font-family: 'Caveat', cursive;
+}
+h3.step {
+  font-size: 2rem;
 }
 
 .text {
