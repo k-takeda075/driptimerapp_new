@@ -27,7 +27,6 @@
             </g>
           </svg>
         </div><!--wave__wrapper end-->
-
         <div class="copy__wrapper">
           <h2 class="mv__ttl">V 60</h2>
           <p class="stop-watch">{{ m }}:{{ s }}:{{ ms }}</p>

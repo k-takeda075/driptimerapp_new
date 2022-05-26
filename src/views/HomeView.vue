@@ -6,12 +6,34 @@
       <p class="text">
         コーヒーのドリップ補助アプリです。<br>
         ご家庭にあるキッチンスケールで誰でも簡単にハンドドリップを楽しめます。<br>
-        使用するドリッパー(器具)を選び、指示にしたがってドリップして下さい。</p>
-      <p class="text">使い方は簡単！<br>
-        90℃ほどのお湯を用意。（沸騰したお湯をドリップケトルに移し替えたら約90℃です）<br>
-        コーヒー13~15gを入れたドリッパーをサーバーの上に置き、スケールの上に乗せる。<br>
-        その重さを差し引くために、メモリを「0」にリセット。<br>
-        準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
+        使用するドリッパー(器具)を選び、指示にしたがってドリップして下さい。
+      </p>
+      <h3>用意するもの</h3>
+      <ul class="preparation text">
+        <li>コーヒー粉 1杯分  13~15g</li>
+        <li>お湯とケトル</li>
+        <li>ドリッパー</li>
+        <li>サーバー（マグに直接でも可）</li>
+        <li>電子スケール</li>
+      </ul>
+      <h3>Step1</h3>
+      <img class="howto_img" src="../assets/howto1.jpg" alt="90℃ほどのお湯を用意">
+      <p class="text">90℃ほどのお湯を用意。（沸騰したお湯をドリップケトルに移し替えたら約90℃です）</p>
+      <h3>Step2</h3>
+      <img class="howto_img" src="../assets/howto2.jpg" alt="90℃ほどのお湯を用意">
+      <p class="text">
+        フィルターをセットしたドリッパーをサーバー（マグ）の上に置き、スケールの上に置く。</p>
+      <p class="text">
+        フィルターを湯通ししておくと、紙の匂いが取れクリアになる。お湯は捨て、水気を切っておく。
+        </p>
+      <h3>Step3</h3>
+      <img class="howto_img" src="../assets/howto3.jpg" alt="90℃ほどのお湯を用意">
+      <p class="text">コーヒー13~15gを入れたら、側面軽くポンポンと叩き平にする。<br>
+        次に重さを差し引くために、スケールの重さを「0」にリセット。</p>
+      <h3>Step4</h3>
+      <img class="howto_img" src="../assets/howto4.jpg" alt="90℃ほどのお湯を用意">
+      <p class="text">準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
+      
       <p class="text">
         また、Select BGMボタンから、App開発者が選曲したコーヒーに合う音楽を再生することができます。<br>
         まずは音楽を再生し、気分を盛り上げてハンドドリップを楽しもう！
@@ -48,6 +70,12 @@ h2 {
   margin: 40px auto 10px;
 }
 
+h3 {
+  font-size: 1.5rem;
+  color: #00a02e;
+  font-family: 'Caveat', cursive;
+}
+
 .text {
   margin: 20px auto 30px;
   text-align: left;
@@ -56,6 +84,10 @@ h2 {
 
 .text span {
   display: block;
+}
+
+.preparation {
+  list-style: none;
 }
 
 .go-select {
@@ -70,6 +102,12 @@ h2 {
   background-color: #42b983;
   border-color: #42b983;
   color: #FFF;
+}
+
+.howto_img {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 30px 0;
 }
 
 </style>
