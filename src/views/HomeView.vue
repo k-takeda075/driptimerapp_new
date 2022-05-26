@@ -18,18 +18,18 @@
       </ul>
       <h3>Step1</h3>
       <img class="howto_img" src="../assets/howto1.jpg" alt="90℃ほどのお湯を用意">
-      <p class="text">90℃ほどのお湯を用意。（沸騰したお湯をドリップケトルに移し替えたら約90℃です）</p>
+      <p class="text">約90℃のお湯を用意（沸騰したお湯をドリップケトルに移し替えたら約90℃です）</p>
       <h3>Step2</h3>
       <img class="howto_img" src="../assets/howto2.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">
         フィルターをセットしたドリッパーをサーバー（マグ）の上に置き、スケールの上に置く。</p>
       <p class="text">
-        フィルターを湯通ししておくと、紙の匂いが取れクリアになる。お湯は捨て、水気を切っておく。
+        フィルターを湯通ししておくと、紙の匂いが取れクリアになる。<br>お湯は捨て、水気を切っておく。
         </p>
       <h3>Step3</h3>
       <img class="howto_img" src="../assets/howto3.jpg" alt="90℃ほどのお湯を用意">
-      <p class="text">コーヒー13~15gを入れたら、側面軽くポンポンと叩き平にする。<br>
-        次に重さを差し引くために、スケールの重さを「0」にリセット。</p>
+      <p class="text">コーヒー13~15gを入れたら、側面を軽くポンポンと叩き平にする。<br>
+        重さを差し引くために、スケールの重さを「0」にリセット。</p>
       <h3>Step4</h3>
       <img class="howto_img" src="../assets/howto4.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
@@ -87,7 +87,11 @@ h3 {
 }
 
 .preparation {
-  list-style: none;
+      /* list-style: none; */
+    max-width: 312px;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 20px 40px;
 }
 
 .go-select {
@@ -95,7 +99,7 @@ h3 {
   background-color: #ffffffbf;
   border-color: #42b983;
   color: #42b983;
-  margin-bottom: 40px;
+  margin: 30px 0 40px;
 }
 
 .go-select:hover {
