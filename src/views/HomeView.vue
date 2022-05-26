@@ -21,19 +21,19 @@
       <img class="howto_img" src="../assets/howto1.jpg" alt="90℃ほどのお湯を用意">
       <p class="text">約90℃のお湯を用意（沸騰したお湯をドリップケトルに移し替えたら約90℃です）</p>
       <h3 class="step">Step 2</h3>
-      <img class="howto_img" src="../assets/howto2.jpg" alt="90℃ほどのお湯を用意">
+      <img class="howto_img" src="../assets/howto2.jpg" alt="ドリッパーをサーバー（マグ）の上に置き、スケールの上に置く">
       <p class="text">
         フィルターをセットしたドリッパーをサーバー（マグ）の上に置き、スケールの上に置く。</p>
       <p class="text">
         フィルターを湯通ししておくと、紙の匂いが取れクリアになる。<br>お湯は捨て、水気を切っておく。
         </p>
       <h3 class="step">Step 3</h3>
-      <img class="howto_img" src="../assets/howto3.jpg" alt="90℃ほどのお湯を用意">
+      <img class="howto_img" src="../assets/howto3.jpg" alt="コーヒー13~15gを入れたら">
       <p class="text">コーヒー13~15gを入れたら、側面を軽くポンポンと叩き平にする。<br>
         重さを差し引くために、スケールの重さを「0」にリセット。</p>
       <h3 class="step">Step 4</h3>
-      <img class="howto_img" src="../assets/howto4.jpg" alt="90℃ほどのお湯を用意">
-      <p class="text">準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
+      <img class="howto_img" src="../assets/howto4.jpg" alt="タイマーのStartボタン">
+      <p class="text">&#12302;ドリパー選択ページ&#12303;へ進み、お使いのドリッパーを選ぶ。<br>準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
       
       <p class="text">
         また、Select BGMボタンから、App開発者が選曲したコーヒーに合う音楽を再生することができます。<br>

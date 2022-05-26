@@ -45,12 +45,6 @@ h1 {
 }
 h2 {
   font-family: 'Caveat', cursive;
-  /* padding: 10px;
-  border: 1px solid #2c3d4f;
-  -webkitborder-radius: 41px 35px 50px 11px/11px 50px 35px 41px;
-  -moz-border-radius: 41px 35px 50px 11px/11px 50px 35px 41px;
-  border-radius: 41px 35px 50px 11px/11px 50px 35px 41px;
-  width: 80%; */
   margin: 0 auto;
   position: relative;
   color: #00a02e;
