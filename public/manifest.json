@@ -4,7 +4,7 @@
 	"description":		"コーヒードリップ用App",
 	"start_url":		"/",
 	"display":			"standalone",
-	"orientation":		"portrait",
+	"orientation":		"portrait-primary",
 	"background_color":	"#fff",
 	"theme_color":		"#fff",
 	"icons": [
