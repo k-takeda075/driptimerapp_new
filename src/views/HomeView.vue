@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <a href="#" id="page-top">TOP</a>
+      <!-- <a href="#" id="page-top">TOP</a> -->
       <h1>Coffee Drip App</h1>
       <h2>HOW TO USE</h2>
       <p class="text">
@@ -33,22 +33,28 @@
         重さを差し引くために、スケールの重さを「0」にリセット。</p>
       <h3 class="step">Step 4</h3>
       <img class="howto_img" src="../assets/howto4.jpg" alt="タイマーのStartボタン">
-      <p class="text">&#12302;ドリパー選択ページ&#12303;へ進み、お使いのドリッパーを選ぶ。<br>準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
+      <p class="text">『ドリパー選択ページ』へ進み、お使いのドリッパーを選ぶ。<br>準備ができたらタイマーのStartボタンを押し、指示に従いドリップするだけ！</p>
       
       <p class="text">
-        また、Select BGMボタンから、App開発者が選曲したコーヒーに合う音楽を再生することができます。<br>
+        また、画面トップにある『Select BGMボタン』から、App開発者が選曲したコーヒーに合う音楽を再生することができます。<br>
         まずは音楽を再生し、気分を盛り上げてハンドドリップを楽しもう！
       </p>
     </div>
     <router-link to ="/selectitemview" class="btn btn-primary go-select">ドリッパー選択へ進む</router-link>
+    <ReturnTop />
   </div>
+  
+  
 </template>
 
 <script>
-export default {
+import ReturnTop from "../components/ReturnTop";
 
-}
+export default {
+  components: { ReturnTop }
+};
 </script>
+
 
 <style scoped>
 
@@ -74,7 +80,7 @@ h3 {
 h3.step {
   font-size: 2rem;
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   margin-bottom: 1em;
 }
 h3.step:before {
@@ -128,33 +134,5 @@ h3.step:before {
   max-width: 400px;
   padding: 5px 30px 0;
 }
-
-/***追従するトップへ戻るボタン***/
-#page-top {
-    position: fixed;
-    right: 5px;
-    bottom: 20px;
-    height: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transform: rotate(90deg);
-    font-size: 90%;
-    line-height: 1.5rem;
-    color: #869193ab;
-    padding: 0 0 0 35px;
-    border-top: solid 1px;
-}
-#page-top::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: 0px;
-    width: 15px;
-    border-top: solid 1px;
-    transform: rotate(35deg);
-    transform-origin: left top;
-}
-/***トップへ戻るボタンここまで***/
 
 </style>

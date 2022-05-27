@@ -1,7 +1,5 @@
 <template>
-
-
-        <div class="gnav_wrapper">
+      <div class="gnav_wrapper">
         <div @click="toggleActive" :class="{active: isActive}" id="menu_btn" class="hamburger_menu">
           <div class="music_player">
             <button class="btn">Select BGM</button>
@@ -12,7 +10,6 @@
           <div class="music_components" :class="{active: isActive}">
             <iframe src="https://open.spotify.com/embed/playlist/3Vla3mJojpU64ZPgAB688R?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
-
       </div><!--gnav_wrapper-->
 </template>
 
@@ -59,31 +56,18 @@ iframe {
   z-index: 2000!important;
 }
 
-/* .dropdown-toggle::after {
-  display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    background-image: url();
-} */
-
 .music_components {
-  /* display: none; */
   position: absolute;
   top: -200vh;
   left: 0;
   width: 100vw;
-  /* background-color: rgba(58, 19, 1, 0.7); */
   padding-top: 80px;
-  /* transform: translateX(-100vw); */
   transition: all 1s;
   z-index: 1;
 }
 .music_components.active {
   top: 252px;
-  /* overflow: scroll; */
   height: 100vh;
-  /* transform: translateX(0); */
   z-index: 1000;
 }
 iframe {
@@ -112,15 +96,11 @@ iframe {
   display: inline-block;
 }
 .hamburger_menu {
-  /* display: none; */
   position: relative;
   z-index: 10;
-  /* width: 40px;
-  height: 18px; */
   cursor: pointer;
 }
 .hamburger_menu:hover {
-  /* opacity: 0.8; */
 }
 .hamburger_menu span {
   width: 0;

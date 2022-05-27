@@ -34,8 +34,17 @@
         </div>
       </li> -->
     </ul>
+    <ReturnTop />
   </div>
 </template>
+
+<script>
+import ReturnTop from "../components/ReturnTop";
+
+export default {
+  components: { ReturnTop }
+};
+</script>
 
 <style scoped>
 .item_select img { width: 100%; }
