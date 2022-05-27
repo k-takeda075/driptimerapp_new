@@ -43,7 +43,7 @@ export default Vue.extend({
 /***追従するトップへ戻るボタン***/
 #page-top {
     position: fixed;
-    right: -20px;
+    right: 0px;
     bottom: 40px;
     height: 50px;
     text-decoration: none;
