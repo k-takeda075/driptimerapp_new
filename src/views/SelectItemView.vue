@@ -58,7 +58,7 @@ export default {
 
 @media (min-width: 768px) {
   .items_wrapper {
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: unset;
     flex-wrap: wrap;
     gap: 0;
