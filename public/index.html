@@ -36,19 +36,3 @@
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-
-
-<script>
-  var orientation = screen.msOrientation || screen.mozOrientation || (screen.orientation || {}).type;
-  
-    if (orientation === "landscape-primary") {
-      console.log("良い感じですね。");
-    } else if (orientation === "landscape-secondary") {
-      console.log("うーん…。画面が上下逆です！");
-    } else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
-      console.log("うーん…。スクリーンを横向きにした方がいいですよ");
-    } else if (orientation === undefined) {
-      console.log("このブラウザーは orientation API に対応していません :(");
-    }
-
-</script>
