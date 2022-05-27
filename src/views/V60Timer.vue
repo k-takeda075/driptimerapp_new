@@ -356,7 +356,8 @@ export default {
   margin-bottom: 15px;
   border-radius: 50px 0 0 50px;
   display: none;
-  color: #05527f;
+  color: #ffe980;
+  font-weight: bold;
   z-index: 100;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 15px;
@@ -365,6 +366,7 @@ export default {
 }
 .comment_text:last-child {
   background: linear-gradient(to right, rgb(252 255 46 / 70%) 0%,rgb(241 223 94 / 70%) 30%,rgb(125 232 197 / 78%) 100%);
+  color: #05527f;
 }
 .comment_wrap .is-active {
   animation: anim 0.7s linear;
