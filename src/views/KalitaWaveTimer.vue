@@ -350,12 +350,12 @@ export default {
   margin: 0;
   position: relative;
   font-weight: normal;
-  background: linear-gradient(to right, rgb(0 208 28) 0%,rgb(56 187 90 / 70%) 30%,rgb(125 185 232 / 90%) 100%);
+  background: linear-gradient(to right, rgb(0 208 28) 0%,rgb(56 187 90 / 90%) 30%,rgb(125 185 232 / 90%) 100%);
   padding: 10px 20px;
   margin-bottom: 15px;
   border-radius: 50px 0 0 50px;
   display: none;
-  color: #ffe980;
+  color: #fbef5e;
   font-weight: bold;
   z-index: 100;
   font-family: 'Noto Sans JP', sans-serif;
@@ -364,7 +364,7 @@ export default {
   line-height: 1.3;
 }
 .comment_text:last-child {
-  background: linear-gradient(to right, rgb(252 255 46 / 70%) 0%,rgb(241 223 94 / 70%) 30%,rgb(125 232 197 / 78%) 100%);
+  background: linear-gradient(to right, rgb(252 255 46 / 70%) 0%,rgb(241 223 94 / 90%) 30%,rgb(125 232 197 / 78%) 100%);
   color: #05527f;
 }
 .comment_wrap .is-active {
@@ -372,7 +372,7 @@ export default {
   display: block;
 }
 .sub_txt {
-  display: block;
+  /* display: block; */
 }
 .oyu {
   color: #fc15a0;
