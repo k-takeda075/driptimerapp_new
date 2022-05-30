@@ -115,10 +115,10 @@
       </section>
       <!--mv-->
           <ol class="comment_wrap">
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯40g</span>を粉全体にかかるように注ぎ,40秒蒸らす</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 40000 }"><span class="oyu">湯60g</span>を円を描くように注ぐ</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 61000 }"><span class="oyu">湯50g</span>を注ぐ</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 100000 }"><span class="oyu">湯50g</span>を注ぎ、最後まで落としきる<span class="sub_txt">※2分20~30秒を目処に終了</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯40g</span>を粉全体にかかるように注ぎ,40秒蒸らす<span class="total">【合計湯量40g】</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 40000 }"><span class="oyu">湯60g</span>を円を描くように注ぐ<span class="total">【合計湯量100g】</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 61000 }"><span class="oyu">湯50g</span>を注ぐ<span class="total">【合計湯量150g】</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 100000 }"><span class="oyu">湯50g</span>を注ぎ、最後まで落としきる<span class="total">【合計湯量200g】</span><span class="sub_txt">※2分20~30秒を目処に終了</span></li>
           </ol>
           <!--comment_wrap-->
     </main>
@@ -300,7 +300,6 @@ export default {
   width: 100%;
   height: 12.98vh;
 }
-
 .parallax > use {
   fill: rgb(129 58 21);
   /* 波のアニメ */
@@ -377,6 +376,9 @@ export default {
 .oyu {
   color: #fc15a0;
   font-weight: 600;
+}
+.total {
+  color: #1d42ff;
 }
 
 @keyframes anim {

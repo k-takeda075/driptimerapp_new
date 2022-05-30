@@ -114,9 +114,9 @@
       </section>
       <!--mv-->
           <ol class="comment_wrap">
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯30g</span>を粉全体にかかるように注ぎ,30秒蒸らす<span class="oyu">湯総量30g</span></li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 30000 }"><span class="oyu">湯100g</span>を中心から外側へ、”の”の字を描く様にゆっくりと注ぐ</li>
-              <li class="comment_text" v-bind:class="{'is-active': interval >= 60000 }"><span class="oyu">湯100g</span>を同じく中心から外側へ、少し早めに注ぐ</li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 1 }"><span class="oyu">湯30g</span>を粉全体にかかるように注ぎ,30秒蒸らす<span class="total">【合計湯量30g】</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 30000 }"><span class="oyu">湯100g</span>を中心から外側へ、”の”の字を描く様にゆっくりと注ぐ<span class="total">【合計湯量130g】</span></li>
+              <li class="comment_text" v-bind:class="{'is-active': interval >= 60000 }"><span class="oyu">湯100g</span>を同じく中心から外側へ、少し早めに注ぐ<span class="total">【合計湯量230g】</span></li>
               <li class="comment_text" v-bind:class="{'is-active': interval >= 90000 }">コーヒーが<span class="oyu">160g</span>抽出できたらドリッパーを外す<span class="sub_txt">※1分半~2分を目処に落としきる</span></li>
           </ol>
           <!--comment_wrap-->
@@ -299,7 +299,6 @@ export default {
   width: 100%;
   height: 12.98vh;
 }
-
 .parallax > use {
   fill: rgb(129 58 21);
   /* 波のアニメ */
@@ -377,6 +376,9 @@ export default {
   color: #fc15a0;
   font-weight: 600;
 }
+.total {
+  color: #1d42ff;
+}
 
 @keyframes anim {
   0% {
@@ -387,7 +389,6 @@ export default {
   transform: translateX(0);
   }
 }
-
 .is-none {
   display: none;
 }

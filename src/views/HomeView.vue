@@ -111,7 +111,7 @@ h3.step:before {
       /* list-style: none; */
     max-width: 312px;
     border: solid 1px;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 20px 40px;
 }
 
